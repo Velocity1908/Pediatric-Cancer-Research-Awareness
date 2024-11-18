@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Downloads - Cloaks Official Oasis</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="cloak.png" type="image/x-icon">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+    <h1>Welcome to Cloak's Official Oasis!</h1>
+    <nav>
+        <ul class="nav-left">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Websites</a></li>
+        </ul>
+        <ul class="nav-right">
+            <li><a href="downloads.html">Articles</a></li>
+            <li><a href="youtube.html">send a message</a></li>
+            
+        </ul>
+    </nav>
+</header>
+    <main>
+        <h2>Texture Pack Downloads</h2>
+        <p>Please confirm your subscription to access downloads:</p>
+        <button onclick="confirmSubscriptionToAccess()">Access Downloads</button>
+    </main>
+
+    <footer>
+        <p>© 2024 Cloaks Official Oasis. All rights reserved.</p>
+    </footer>
+
+    <!-- Modal -->
+    <div id="subscribeModal" style="display: none;">
+        <div id="subscribeModalContent">
+            <h2 style="color: white;">Are You Subscribed To Cloak?</h2>
+            <p style="color: white;">Please confirm that you are subscribed to Cloak's YouTube channel before downloading!</p>
+            <button onclick="displayDownloads()" class="modal-btn">Yes, I'm Subscribed!</button>
+            <button onclick="redirectToYouTube()" class="modal-btn">No, I'm Not Subscribed.</button>
+        </div>
+    </div>
+
+    <script>
+        let downloadLinks = {
+            'Flawless 32x Best PVP Texture Pack': 'https://files.catbox.moe/vvxfn9.mcpack',
+            'Best Bedwars Texture Pack': 'https://files.catbox.moe/xgvwcy.mcpack', 
+            'Purple Twilight Texture Pack': 'https://files.catbox.moe/k7wbrg.mcpack', 
+            'Blood Thirsty Texture Pack': 'https://files.catbox.moe/cewqw9.mcpack', 
+            'Frostbite 128x Texture Pack': 'https://files.catbox.moe/o2s672.mcpack', 
+            '1K Texture Pack': 'https://files.catbox.moe/lr4xb1.mcpack',
+            // Add additional packs here...
+        };
+
+        function confirmSubscriptionToAccess() {
+            document.getElementById('subscribeModal').style.display = 'flex';
+        }
+
+        function displayDownloads() {
+            closeModal();
+            let mainContent = '<h3>Available Downloads:</h3><ul>';
+            Object.keys(downloadLinks).forEach(pack => {
+                mainContent += `<li><a href="${downloadLinks[pack]}" target="_blank" class="download-link">${pack}</a></li>`;
+            });
+            mainContent += '</ul>';
+            document.querySelector('main').innerHTML = mainContent + '<button onclick="location.reload()">Go Back</button>';
+        }
+
+        function redirectToYouTube() {
+            window.location.href = "https://www.youtube.com/@Cloakyt1";
+        }
+
+        function closeModal() {
+            document.getElementById('subscribeModal').style.display = 'none';
+        }
+        function toggleMenu() {
+            const nav = document.getElementById('hamburgerNav');
+            nav.style.display = nav.style.display === 'none' || nav.style.display === '' ? 'block' : 'none';
+        }
+    </script>
+    
+</body>
+</html>

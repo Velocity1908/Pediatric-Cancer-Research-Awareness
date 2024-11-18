@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pediatric Cancer Research Awareness</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="cloak.png" type="image/x-icon">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+    <h1>Welcome to the unoff website for Pediatric Cancer Research Awareness!</h1>
+    <nav>
+        <ul class="nav-left">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Websites</a></li>
+        </ul>
+        <ul class="nav-right">
+            <li><a href="downloads.html">Articles</a></li>
+            <li><a href="youtube.html">send a message</a></li>
+            
+        </ul>
+    </nav>
+</header>
+
+    <main>
+        <h4> Check Out Two Youth Cancer Foundations!</h4>
+        <div class="Youtube video-thumbnails">
+            <div class="thumbnail-container">
+                <a href="https://www.stjude.org" target="_blank">
+                    <img src="St-Jude-emblem.jpeg" alt="Flawless 32x Texture pack">
+                </a>
+                <button onclick="confirmSubscription('https://www.stjude.org', 'https://www.youtube.com/watch?v=WxEiBlixokI')">Saint judes children hospital</button>
+            </div>
+
+            <div class="thumbnail-container">
+                <a href="https://pcrf-kids.org" target="_blank">
+                    <img src="LogoNew-300x196.png" alt="Best Bedwars Texture Pack">
+                </a>
+                <button onclick="confirmSubscription('https://pcrf-kids.org', 'https://www.youtube.com/watch?v=Lwe0NCZLnV0')">PCRF (Pediatric Cancer Research Foundation)!</button>
+            </div>
+        </div>
+
+        <div class="btn-container">
+            <a href="https://magazine.medlineplus.gov/article/new-treatments-possible-for-a-rare-childhood-cancer/" target="_blank" class="btn">Check Out This Article!</a>
+            <a href="https://www.nyp.org/advances/pediatrics/oncology?utm_medium=search&utm_source=ci_google&utm_campaign=NYP-%7C-Tier-2-%7C-Unbranded-%7C-Peds-%7C-Phrase&utm_content=PhysicianReputation_Search_Google_Adults-25+~KEY~HCP_CPC_NA&utm_creative=PhysicianReputation_Search_Adults-25+_National_CPC_Agnostic__Text_Text_Text_Q2-2024&gbraid=0AAAAAoQ3gyesslOwIfEhuNR0Wz9ODkPuR&gclid=Cj0KCQiA6Ou5BhCrARIsAPoTxrCFSxOJ1g1PyJC1ZSfcuWWhzcXYvsrhG9PRpqbuUNuAX5PK7fiPeSoaAnNXEALw_wcB&gclsrc=aw.ds" target="_blank" class="btn">Stay Updated!</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 Pediatric Cancer Research Awareness . All rights reserved.</p>
+    </footer>
+
+    <!-- Modal -->
+    <div id="subscribeModal" style="display: none;">
+        <div id="subscribeModalContent">
+            <h2 style="color: white;">Are You Sure you wanna leave this site before finishing?</h2>
+            <p style="color: white;">Please confirm that want to leave this site!</p>
+            <button onclick="confirmDownload()" class="modal-btn">Yes, I'm Sure!</button>
+            <button onclick="redirectToYouTube()" class="modal-btn">No, I'm Not Sure.</button>
+        </div>
+    </div>
+
+    <script>
+        let leavesite = '';
+        closeModal  ='';
+
+        function confirmSubscription(Website, Website) {
+            Website = OtherWebsite;
+            Website = SameWebsite;
+            document.getElementById('subscribeModal').style.display = 'flex';
+        }
+
+        function confirmDownload() {
+            window.location.href = currentDownloadLink; 
+            closeModal();
+        }
+
+        function closeModal() {
+            document.getElementById('subscribeModal').style.display = 'none';
+        }
+
+        function redirectToYouTube() {
+            window.location.href = currentVideoLink;
+        }
+
+        function toggleMenu() {
+            const nav = document.getElementById('hamburgerNav');
+            nav.style.display = nav.style.display === 'none' || nav.style.display === '' ? 'block' : 'none';
+        }
+    </script>
+</body>
+</html>

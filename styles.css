@@ -1,0 +1,180 @@
+/* Base styles */
+body {
+    background-color: #000000; /* Black background */
+    color: #ffffff; /* White text */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 32px;
+    background-color: #111111;
+}
+
+nav {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the navigation */
+    padding: 10px 0; /* Padding for nav */
+}
+
+nav ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0 20px; /* Space between the nav groups */
+}
+
+.nav-left {
+    margin-right: auto; /* Push the left nav group to the left */
+}
+
+.nav-right {
+    margin-left: auto; /* Push the right nav group to the right */
+}
+
+nav a {
+    color: #ffffff; /* White text */
+    text-decoration: none; /* Remove underline */
+    padding: 10px; /* Space around links */
+}
+
+nav a:hover {
+    background-color: #ff0000; /* Background color on hover */
+    border-radius: 5px; /* Rounded corners on hover */
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+h2, p {
+    text-align: center;
+    color: #ddd;
+}
+
+/* Video thumbnails styling */
+.video-thumbnails,
+#additionalVideos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 10px;
+    justify-items: center;
+}
+
+.thumbnail-container {
+    text-align: center;
+    background-color: #222222; /* Background for each thumbnail */
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.thumbnail-container:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.thumbnail-container a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.thumbnail-container img {
+    width: 100%;
+    height: auto;
+}
+
+.thumbnail-container p {
+    padding: 10px;
+    font-size: 1rem;
+    color: #ddd;
+    background-color: #333;
+    margin: 0;
+}
+
+/* Button styling */
+.btn {
+    display: block;
+    padding: 10px 20px;
+    margin: 20px auto;
+    background-color: #444444; /* Darker button color */
+    color: #ffffff; /* White text for the buttons */
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #555555; /* Lighter color on hover */
+}
+
+a.download-link {
+    color: white; /* Set the link text color to white */
+    text-decoration: none; /* Remove underline */
+}
+
+a.download-link:hover {
+    text-decoration: underline; /* Optional: Underline on hover */
+}
+
+/* Modal styling */
+#subscribeModal {
+    display: none; /* Initially hidden */
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Darker black background */
+    justify-content: center;
+    align-items: center;
+}
+
+#subscribeModalContent {
+    background-color: #333333; /* Darker modal background */
+    padding: 30px;
+    text-align: center;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 90%;
+}
+
+.modal-btn {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px; /* Closer spacing for buttons */
+    background-color: #444444; /* Darker button color */
+    color: #ffffff; /* White text for the buttons */
+    text-decoration: none;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transition effect */
+}
+
+.modal-btn:hover {
+    background-color: #555555; /* Lighter color on hover */
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 32px;
+    background-color: #111111;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .thumbnail-container {
+        width: 90%;
+        margin: auto;
+    }
+}
